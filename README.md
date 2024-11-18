@@ -2,7 +2,7 @@
 
 * Modify assess.py to solve the problems as stated in the topic content.
 * You can test technical correctness by running the unit tests as in the section To Run Test below.
-* Note that some tests will give you problems so fix them.
+* Please note that some tests may present challenges so I'd recommend carefully reviewing them in solving the problem.
 
 
 # To Run Test
