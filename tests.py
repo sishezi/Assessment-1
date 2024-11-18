@@ -4,30 +4,27 @@ from assess import *
 class TestCase(unittest.TestCase):
     
     def test_grade_ave(self):
-        self.assertIsInstance(grade_average([1,2,3,4,5]), str, "Items in list must be integers")
         self.assertEqual(grade_average([1,2,3,4,5]), 3, "Unexpected output")
         self.assertEqual(grade_average([46, 78, 32, -5, 6]), 40.5, "Incorrect output")
         self.assertEqual(grade_average([-56, 94, -3, 0]), 47, "Unexpected output")
         self.assertEqual(grade_average([-2, -45, -82]), 0, "Unexpected output")
-        self.assertEqual(grade_average([]), -1, None)
+        self.assertEqual(grade_average([]), 0.0, "Unexpected ouput")
 
 
     def test_primes(self):
-        self.assertIsInstance(find_prime_factors(5), int, "Expected a list")
-        self.assertEqual(find_prime_factors(3), [3], None)
+        self.assertIsInstance(find_prime_factors(5), [5], "Unexpected output")
         self.assertEqual(find_prime_factors(78), [2, 3, 13], "Unexpected output")    
 
 
     def test_interest(self):
-        # write tests that cater for the output being an integer, unexpected outputs and expected ouputs
-        pass
+        self.assertEqual(calculate_interest(650,0.07,3),150.92)
 
 
     def test_code_word(self):
-            self.assertIsInstance(code_word([3,1,20]), list, "Expected a string")
-            self.assertEqual(code_word([16,25,20,8,15,14]), "python", "Unexpected output")
-            self.assertEqual(code_word([14,1,20,21,18,5]), "nature", None)
-            self.assertEqual(code_word([9,0,3,1,14,0,4,15,0,9,20]), "i can do it", "Unexpected output")
+        self.assertEqual(code_word([3,1,20]), "cat", "Unexpected output")
+        self.assertEqual(code_word([16,25,20,8,15,14]), "python", "Unexpected output")
+        self.assertEqual(code_word([14,1,20,21,18,5]), "nature", "Unexpected output")
+        self.assertEqual(code_word([9,0,3,1,14,0,4,15,0,9,20]), "i can do it", "Unexpected output")
 
 
     def test_triangles(self):
